@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5 - Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #e0f7fa;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: #3700b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Form Card</h2>
+    <form>
+      <label>Name:</label>
+      <input type="text" placeholder="Enter your name"><br><br>
+      <label>Email:</label>
+      <input type="email" placeholder="Enter your email"><br><br>
+      <button class="btn">Submit</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Table Card</h2>
+    <table border="1">
+      <tr><th>Name</th><th>Age</th></tr>
+      <tr><td>Ahmed</td><td>20</td></tr>
+      <tr><td>Mona</td><td>22</td></tr>
+    </table>
+    <br>
+    <button class="btn">More</button>
+  </div>
+
+  <div class="card">
+    <h2>List Card</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <br>
+    <button class="btn">Explore</button>
+  </div>
+
+</body>
+</html>
+

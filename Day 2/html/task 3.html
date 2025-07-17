@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stylish Page with Form, Table, and Lists</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e0e7ff;
+    }
+
+    .wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    /* === FORM === */
+    #userForm {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    #userForm label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    #userForm input, #userForm textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    #userForm input[type="submit"] {
+      background-color: #6366f1;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #userForm input[type="submit"]:hover {
+      background-color: #4f46e5;
+    }
+
+    /* === ORDERED LIST === */
+    .steps {
+      background-color: #fef3c7;
+      padding: 20px;
+      border-left: 6px solid #f59e0b;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    .steps ol {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    /* === UNORDERED LIST === */
+    .shopping {
+      background-color: #d1fae5;
+      padding: 20px;
+      border-left: 6px solid #10b981;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .shopping ul {
+      list-style-type: circle;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    /* === TABLE === */
+    .student-table {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .student-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .student-table th {
+      background-color: #3b82f6;
+      color: white;
+      padding: 12px;
+    }
+
+    .student-table td {
+      padding: 12px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+    }
+
+    .student-table tr:nth-child(even) {
+      background-color: #f9fafb;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- FORM SECTION -->
+    <form id="userForm">
+      <h2>Contact Form</h2>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <!-- ORDERED LIST SECTION -->
+    <div class="steps">
+      <h3>Steps to Learn Web Development</h3>
+      <ol>
+        <li>Understand how the web works (HTTP, Browsers)</li>
+        <li>Learn HTML basics and build layouts</li>
+        <li>Style your pages with CSS (Flexbox, Grid)</li>
+        <li>Add interactivity using JavaScript</li>
+        <li>Work on real-life projects</li>
+      </ol>
+    </div>
+
+    <!-- UNORDERED LIST SECTION -->
+    <div class="shopping">
+      <h3>Shopping List</h3>
+      <ul>
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+        <li>Coffee</li>
+      </ul>
+    </div>
+
+    <!-- TABLE SECTION -->
+    <div class="student-table">
+      <h3 style="padding: 15px;">Student Grades</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ahmed</td>
+            <td>Math</td>
+            <td>92</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Salma</td>
+            <td>English</td>
+            <td>89</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Yousef</td>
+            <td>Science</td>
+            <td>94</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>

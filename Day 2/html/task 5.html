@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تقدير الدرجات</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding-top: 50px;
+      direction: rtl;
+    }
+
+    h1 {
+      color: #6200ea;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      width: 220px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    #result {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e0f7fa;
+      color: #006064;
+      font-size: 20px;
+      border-radius: 12px;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>أحمد محمود خيري محمد</h1>
+
+  <input type="number" id="gradeInput" placeholder="أدخل درجتك من 0 إلى 100" min="0" max="100">
+  <br><br>
+
+  <button onclick="calculateGrade()">أحسب التقدير</button>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateGrade() {
+      const grade = parseFloat(document.getElementById("gradeInput").value);
+      const resultDiv = document.getElementById("result");
+      let resultText = "";
+
+      if (grade >= 85 && grade <= 100) {
+        resultText = "تقديرك: ممتاز";
+      } else if (grade >= 75) {
+        resultText = "تقديرك: جيد جداً";
+      } else if (grade >= 65) {
+        resultText = "تقديرك: جيد";
+      } else if (grade >= 50) {
+        resultText = "تقديرك: مقبول";
+      } else if (grade >= 0) {
+        resultText = "للأسف لم تنجح.";
+      } else {
+        resultText = "من فضلك أدخل درجة صحيحة من 0 إلى 100.";
+      }
+
+      resultDiv.innerText = resultText;
+      resultDiv.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
+

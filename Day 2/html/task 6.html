@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Welcome Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1 id="welcome"></h1>
+
+  <form onsubmit="return showMessage()">
+    <label for="username">Enter your name:</label><br>
+    <input type="text" id="username" placeholder="Your name here"><br>
+    <input type="submit" value="Submit">
+    <div class="message" id="msg"></div>
+  </form>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Job</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>25</td>
+      <td>Developer</td>
+    </tr>
+    <tr>
+      <td>Emma</td>
+      <td>28</td>
+      <td>Designer</td>
+    </tr>
+  </table>
+
+  <script>
+    // Random welcome message
+    let greetings = ["Welcome!", "Hello there!", "Great to see you!"];
+    let index = Math.floor(Math.random() * greetings.length);
+    document.getElementById("welcome").innerText = greetings[index];
+
+    // Show message when name is entered
+    function showMessage() {
+      let name = document.getElementById("username").value;
+      if (name.trim() !== "") {
+        document.getElementById("msg").innerText = "Hello, " + name + "!";
+      } else {
+        document.getElementById("msg").innerText = "Please enter your name.";
+      }
+      return false; // prevent form refresh
+    }
+  </script>
+
+</body>
+</html>
